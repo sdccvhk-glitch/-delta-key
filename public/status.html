@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Check Order Status - DELTA.KEYS</title><link rel="stylesheet" href="/styles.css"></head>
+<body class="store-page">
+<header class="topbar"><a class="wordmark" href="/">DELTA<span>.KEYS</span></a><button class="hamburger" id="menuToggle"><span></span><span></span><span></span></button></header>
+<div class="side-menu glass" id="sideMenu" hidden>
+  <a href="/"><span class="menu-icon"></span><span>Home</span></a>
+  <a href="/products"><span class="menu-icon"></span><span>Products</span></a>
+  <a href="/status"><span class="menu-icon"></span><span>Check Order</span></a>
+  <a href="/admin"><span class="menu-icon"></span><span>Login</span></a>
+</div>
+<main class="access-wrap"><section class="access-card glass">
+<div class="access-head"><div class="kicker">ORDER LOOKUP</div><h1>Check Order Status</h1><p>Enter your order ID to view its current status and key.</p></div>
+<form id="statusForm">
+<label for="orderId">ORDER ID</label>
+<input id="orderId" required placeholder="e.g. DK-A1B2C3D4E5">
+<button class="purchase-btn" type="submit">Check Status <span>&gt;</span></button>
+<p id="error" class="form-error"></p>
+</form>
+<div id="result" class="result-box" hidden></div>
+</section></main>
+<script>
+const m=document.getElementById('sideMenu');document.getElementById('menuToggle').onclick=()=>m.hidden=!m.hidden;
+</script>
+<script src="/status.js"></script>
+</body></html>
